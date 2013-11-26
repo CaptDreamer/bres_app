@@ -1,7 +1,16 @@
-<% provide(:title, 'Home') %>
-<div class="center hero-unit">
-<h1>Welcome to Bre's Website</h1>
+<div class="jumbotron">
+	<h1>Welcome to Bre's Website</h1>
+	<h2>This is the writing portfolio for Bre Bader, a soon to be, New York Times bestselling author.</h2>
+</div>
 
-<h2>This is the writing portfolio for Bre Bader, a soon to be, New York Times bestselling author.</h2>
+<div class="container mainpage">
+	<div class="row">
+		<div class="col-lg-8">
+			<%= render '/layouts/blog' %>
+		</div>
+		<div class="col-lg-4">
+			<%= render '/layouts/booklist' %>
+		</div>
+	</div>
 </div>
 
