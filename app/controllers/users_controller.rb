@@ -15,6 +15,8 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+    @blogposts = @user.blogposts.paginate(page: params[:page])
+    @blogpost = current_user.blogposts.build if signed_in?
 	end
 
 	def new
