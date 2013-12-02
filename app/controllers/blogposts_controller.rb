@@ -8,9 +8,9 @@ class BlogpostsController < ApplicationController
 		@blogpost = current_user.blogposts.build(blogpost_params)
 		if @blogpost.save
 			flash[:success] = "Blog post created!"
-			redirect_to root_url
+			redirect_to current_user
 		else
-			render 'static_pages/home'
+			redirect_to current_user, object: @blogpost
 		end
 	end
 

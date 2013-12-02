@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-  	@blogpost = current_user.blogposts.build if signed_in?
+  	@blogposts = Blogpost.paginate(page: params[:page])
   end
 
   def show

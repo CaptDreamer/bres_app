@@ -1,15 +1,17 @@
 <% provide(:title, @user.name) %>
 <h1><%= @user.name %></h1>
-<div class="container">
-	<%= render 'shared/blogpost_form' %>
-</div>
+<% if current_user.admin? && !current_user?(user) %>
+	<div class="container">
+		<%= render 'shared/blogpost_form' %>
+	</div>
+<% end %>
 
-<div class="col-md-8">
+<div class="container">
 <% if @user.blogposts.any? %>
   <h3>Blogposts (<%= @user.blogposts.count %>)</h3>
   <ol class="microposts">
     <%= render @blogposts %>
   </ol>
-  <%= will_paginate @blogposts, renderer: BootstrapPagination::Rails %> %>
+  <%= will_paginate @blogposts, renderer: BootstrapPagination::Rails %>
 <% end %>
 </div>

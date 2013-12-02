@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def feed
+    blogpost.where("user_id = ?", id)
+  end
+
 	def show
 		@user = User.find(params[:id])
     @blogposts = @user.blogposts.paginate(page: params[:page])
