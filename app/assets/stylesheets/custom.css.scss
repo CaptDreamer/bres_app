@@ -1,167 +1,38 @@
 @import "bootstrap";
 
-/* mixins, variables, etc. */
+/* Variables */
 
-$gray-medium-light: #eaeaea;
+$breBlueLighter: #b5dddf;
+$breBlueLight: #7fabae;
+$breBlue: #617f89;
+$breBlueDark: #3a4a57;
+$breBlueDarker: #252b37;
 
-@mixin box_sizing {
-  box-sizing: border-box;
+/* Universal */
+
+Body {
+  background-color: $breBlueDarker;
+  color: $breBlueLighter;
 }
 
-/* Typography */
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $gray-light;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
-
-/* Logo */
-
-#logo {
-  text-transform: uppercase;
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  font-weight: bold;
-  &:hover {
-    color: $gray;
-    text-decoration: none;
-  }
+h1 h2 h3 h4 h5 h6 {
+  color: $breBlueLighter;
 }
 
 /* Jumbotron */
+
 .jumbotron {
-  h1 {
-    font-size: 80px;
-    font-weight: bold;
-    letter-spacing: -4px;
-    line-height: 1;
-    margin-bottom: 0px;
-  }
-  h2 {
-    margin-top: 0px;
-  }
-}
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
+  background-color: $breBlue;
 }
 
-/* miscellaneous */
+/* Nav Bar */
 
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
+.navbar-default {
+  background-color: $breBlueDark;
 }
 
-/* forms */
+/* Blog */
 
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
+.panel {
+  background-color: $breBlueDark;
 }
-
-input {
-  height: auto !important;
-}
-
-#error_explanation {
-  color: #f00;
-  ul {
-    list-style: none;
-    margin: 10px 10px 18px 10px;
-  }
-}
-
-.field_with_errors {
-  @extend .has-error;
-}
-
-/* Users index */
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-top: 1px solid $gray-lighter;
-    &:last-child {
-      border-bottom: 1px solid $gray-lighter;
-    }
-  }
-}
-
-/* microposts */
-
-.microposts {
-  list-style: none;
-  margin: 10px 0 0 0;
-
-  li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-}
-.content {
-  display: block;
-}
-.timestamp {
-  color: $gray-light;
-}
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
-
