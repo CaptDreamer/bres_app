@@ -21,8 +21,17 @@ h1 h2 h3 h4 h5 h6 {
 
 /* Typography */
 
+h1 h2 {
+
+}
+
 h2 {
   text-align: center;
+  font-size: 1.5em;
+}
+
+html body {
+  font-family: "Times New Roman", Times, serif;
 }
 
 
@@ -56,4 +65,5 @@ h2 {
 
 .footer {
   padding: 20px 20px;
+
 }
