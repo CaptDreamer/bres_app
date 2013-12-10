@@ -1,9 +1,7 @@
 <div class = "panel">
-  <span class="content lead"><%= blogpost.content %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(blogpost.created_at) %> ago.
-  </span>
-  <div class="pull-right">
-  	By <%= link_to blogpost.user.name, about_path %>
+  <span class="content small"><%= blogpost.content %></span>
+  <div class="blog-footer">
+  	<span class = "pull-left small text-muted">Posted <%= time_ago_in_words(blogpost.created_at) %> ago.</span>
+    <span class="pull-right small text-muted">By <%= link_to blogpost.user.name, about_path %></span>
   </div>
 </div>

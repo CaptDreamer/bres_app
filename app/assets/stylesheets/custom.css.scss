@@ -19,20 +19,41 @@ h1 h2 h3 h4 h5 h6 {
   color: $breBlueLighter;
 }
 
+/* Typography */
+
+h2 {
+  text-align: center;
+}
+
+
 /* Jumbotron */
 
 .jumbotron {
   background-color: $breBlue;
 }
 
+#myCarousel {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+
 /* Nav Bar */
 
 .navbar-default {
   background-color: $breBlueDark;
+  padding: 30px 30px;
+  margin-bottom: 0;
 }
 
 /* Blog */
 
 .panel {
   background-color: $breBlueDark;
+}
+
+/* Footer */
+
+.footer {
+  padding: 20px 20px;
 }
