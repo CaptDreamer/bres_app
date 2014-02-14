@@ -1,6 +1,10 @@
 <article class = "panel">
 	<header>
-		<h3><%= blogpost.subject %></h3>
+		<h3><%= blogpost.subject %>
+			<% if signed_in? && current_user.admin? %>
+				<span style="float:right;"><%= link_to "Delete", blogpost, method: :delete, data: { confirm: "You sure?" } %></span>
+			<% end %>
+		</h3>
 	</header>
 
   	<p><%= blogpost.content %></p>
