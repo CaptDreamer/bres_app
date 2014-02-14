@@ -66,7 +66,7 @@ small {
 }
 
 .carousel {
-  background:url('open-book.png') no-repeat center bottom;
+  background:url(<%= asset_path 'open-book.png' %>) no-repeat center bottom;
   background-size: 100% auto;
 }
 
