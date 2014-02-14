@@ -1,7 +1,20 @@
-<div class = "panel">
-  <span class="content small"><%= blogpost.content %></span>
-  <div class="blog-footer">
-  	<span class = "pull-left small text-muted">Posted <%= time_ago_in_words(blogpost.created_at) %> ago.</span>
-    <span class="pull-right small text-muted">By <%= link_to blogpost.user.name, about_path %></span>
-  </div>
-</div>
+<article class = "panel">
+	<header>
+		<h3>This is where the subject will go</h3>
+	</header>
+
+  	<p><%= blogpost.content %></p>
+
+  	<footer class = "text-muted">
+  		<p>
+	  		<small>Posted <%= time_ago_in_words(blogpost.created_at) %> ago.
+	  		</small>
+
+	    	<span class= "byline">
+	    		<small>
+	    			By <%= link_to blogpost.user.name, about_path %>
+	    		</small>
+	    	</span>
+	    </p>
+  	</footer>
+</article>

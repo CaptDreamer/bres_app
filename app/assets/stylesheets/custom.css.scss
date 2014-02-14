@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "fonts.css";
 
 /* Variables */
 
@@ -10,32 +11,46 @@ $breBlueDarker: #252b37;
 
 /* Universal */
 
-Body {
+body {
   background-color: $breBlueDarker;
   color: $breBlueLighter;
 }
 
-h1 h2 h3 h4 h5 h6 {
+h1, h2, h3, h4, h5, h6 {
   color: $breBlueLighter;
 }
 
 /* Typography */
 
-h1 h2 {
-
+h1 {
+  font-family: eb_garamondregular, serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 4.5em;
 }
 
-h2 {
+h2, h3 {
+  font-family: Futura, sans-serif;
   text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h3 {
   font-size: 1.5em;
 }
 
-html body {
-  font-family: "Times New Roman", Times, serif;
+body {
+  font-family: Futura, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+small {
+  font-size: 0.5em;
 }
 
 
-/* Jumbotron */
+/* Main Page Splash */
 
 .jumbotron {
   background-color: $breBlue;
@@ -46,12 +61,20 @@ html body {
   padding: 0 0 0 0;
 }
 
+.item {
+  min-height: 250px;
+}
+
+.carousel {
+  background:url('open-book.png') no-repeat center bottom;
+  background-size: 100% auto;
+}
+
 
 /* Nav Bar */
 
 .navbar-default {
   background-color: $breBlueDark;
-  padding: 30px 30px;
   margin-bottom: 0;
 }
 
@@ -59,6 +82,16 @@ html body {
 
 .panel {
   background-color: $breBlueDark;
+  padding: 10px 10px 0 10px;
+  zoom: 1; /* IE6&7 */
+  footer {
+    .byline {
+      float: right;
+    }
+  }
+  h3 {
+    margin-top: 5px;
+  }
 }
 
 /* Footer */
