@@ -6,12 +6,12 @@
 	</div>
 <% end %>
 
+<% if @user.blogposts.count != 0 %>
 <div class="container">
-<% if @user.blogposts.any? %>
   <h3>Blogposts (<%= @user.blogposts.count %>)</h3>
   <ol class="microposts">
     <%= render @blogposts %>
   </ol>
   <%= will_paginate @blogposts, renderer: BootstrapPagination::Rails %>
-<% end %>
 </div>
+<% end %>

@@ -12,7 +12,6 @@ class BlogpostsController < ApplicationController
 			flash[:success] = "Blog post created!"
 			redirect_to current_user
 		else
-			flash[:error] = "Something went wrong!"
 			render template: "users/show"
 		end
 	end
