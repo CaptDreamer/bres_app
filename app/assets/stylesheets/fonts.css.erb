@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'eb_garamondregular';
-    src: url('ebgaramond-webfont.eot');
-    src: url('ebgaramond-webfont.eot?#iefix') format('embedded-opentype'),
-         url('ebgaramond-webfont.woff') format('woff'),
-         url('ebgaramond-webfont.ttf') format('truetype'),
-         url('ebgaramond-webfont.svg#eb_garamondregular') format('svg');
+    src: <%= asset_url("ebgaramond-webfont.eot", font) %>;
+    src: <%= asset_url("ebgaramond-webfont.eot?#iefix", font) %> format('embedded-opentype'),
+         <%= asset_url("ebgaramond-webfont.woff", font) %> format('woff'),
+         <%= asset_url("ebgaramond-webfont.ttf", font) %> format('truetype'),
+         <%= asset_url("ebgaramond-webfont.svg#eb_garamondregular", font) %> format('svg');
     font-weight: normal;
     font-style: normal;
 }
