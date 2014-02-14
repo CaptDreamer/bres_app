@@ -6,20 +6,26 @@ class BlogpostsController < ApplicationController
 
 	def create
 		@blogpost = current_user.blogposts.build(blogpost_params)
+		@user = current_user
+		@blogposts = @user.blogposts.paginate(page: params[:page])
 		if @blogpost.save
 			flash[:success] = "Blog post created!"
 			redirect_to current_user
 		else
-			redirect_to current_user, object: @blogpost
+			flash[:error] = "Something went wrong!"
+			render template: "users/show"
 		end
 	end
 
 	def destroy
 	end
 
+	def show
+	end
+
 	private
 
 		def blogpost_params
-			params.require(:blogpost).permit(:content)
+			params.require(:blogpost).permit(:content, :subject)
 		end
 end

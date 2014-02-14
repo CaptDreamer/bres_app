@@ -1,6 +1,6 @@
 <% provide(:title, @user.name) %>
 <h1><%= @user.name %></h1>
-<% if current_user.admin? && !current_user?(user) %>
+<% if current_user.admin? %>
 	<div class="container">
 		<%= render 'shared/blogpost_form' %>
 	</div>
